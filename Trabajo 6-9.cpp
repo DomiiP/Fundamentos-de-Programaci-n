@@ -1,4 +1,6 @@
+#define _USE_MATH_DEFINES
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 int main()
@@ -9,23 +11,12 @@ int main()
 	float radio;
 	radio = diametro/2;
 	cout<<"El radio de la esfera es: "<<radio<<endl;
-	double pi;
-	pi = 3.1416;
-	float area;
-	area = (4*pi*(radio*radio));
+	float area, volumen;
+	area = (4*M_PI*(radio*radio));
 	cout<<"El area de la esfera es: "<<area<<endl;
-	float volumen;
-	volumen = ((4/3)*pi*(radio*radio*radio));
+	volumen = ((4/3)*M_PI*(radio*radio*radio));
 	cout<<"Su volumen es: "<<volumen<<endl;
-	if(area>30)
-	{
-		cout<<"El area es gigante"<<endl;
-	}
-	else 
-	{
-		cout<<"El area es pequena"<<endl;
-	}
-	
+	if(area>30)cout<<"El area es gigante"<<endl;
+	else cout<<"El area es pequena"<<endl;
 	return 0;
-	
 }
